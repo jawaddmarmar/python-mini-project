@@ -1,16 +1,23 @@
 password = input("enter your password:")
 
 def pwd_check(psd):
-    res=""
+    has_number = False
+    has_uppercase = False
+
     if len(psd) >=8:
 
         for x in psd:
             if x.isdigit():
-                res="valid"
-                print(res)
-                return True
-        res="must have a number"
-        print(res)
+                has_number=True
+                             
+            if x.isupper():
+                has_uppercase=True
+        if has_number and has_uppercase:
+           print("strong")    
+        elif has_number or has_uppercase:   
+            print("medium") 
+        else:
+            print("weak")
     else:
         print("Your password is weak")
 
