@@ -22,12 +22,12 @@ def pwd_check(psd):
                 has_special=True
 
 ###############################                
-            if has_number and has_uppercase and has_special:
-               print("strong")    
-            elif has_number or has_uppercase or has_special:   
-                print("medium") 
-            else:
-                print("weak")
+        if has_number and has_uppercase and has_special:
+            print("strong")    
+        elif has_number or has_uppercase or has_special:   
+            print("medium") 
+        else:
+            print("weak")
             
     else:
         print("Your password is weak")
